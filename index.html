@@ -61,6 +61,12 @@
         for (let i = 0; i < maxPredictions; i++) {
             const classPrediction =
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+          if(prediction[i].probability.toFixed(2) > 0.5){
+            console.log("yes");
+          }
+          else{
+            console.log("no");
+          }
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
     }
