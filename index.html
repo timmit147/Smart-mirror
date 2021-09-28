@@ -97,21 +97,14 @@
     height: 100vh;
 }
       
+      
        button{
-       font-family: Arial, Helvetica, sans-serif;
-       color:#202124;
-       margin: 1em;
-       position: fixed;
        z-index: 1;
        top: 50%;
-       transform: translate(0%, -50%);
-       }
-      
-       a.button{
        display:inline-block;
        padding:0.35em 1.2em;
        border:0.1em solid #FFFFFF;
-       margin:0 0.3em 0.3em 0;
+       margin: 1em;
        border-radius:0.12em;
        box-sizing: border-box;
        text-decoration:none;
@@ -120,8 +113,10 @@
        color:#FFFFFF;
        text-align:center;
        transition: all 0.2s;
+       position: fixed;
+       transform: translate(0%, -50%);
        }
-       a.button1:hover{
+       button:hover{
        color:#000000;
        background-color:#FFFFFF;
        }
