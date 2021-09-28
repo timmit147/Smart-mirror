@@ -1,6 +1,6 @@
 <button type="button" onclick="init()">Start</button>
 <div id="webcam-container"></div>
-<div id="label-container"></div>
+<div id="label-container"></div><h1 id="stropdasH1">Je stropdas zit verkeerd</h1>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
 <script type="text/javascript">
@@ -8,12 +8,19 @@
         
     // More API functions here:
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+    const stropdas=Document.getElementById("stropdasH1");
 
     // the link to your model provided by Teachable Machine export panel
     const URL = "./";
 
     let model, webcam, labelContainer, maxPredictions;
-
+  
+    function 
+      stropdas.classList.add("visible");
+    if 
+      stropdas.classList.remove("visible");
+  
+  
     // Load the image model and setup the webcam
     async function init() {
         const modelURL = URL + "model.json";
@@ -68,7 +75,18 @@
     position: fixed;
     top: 0;
 }
-        
+      
+      #stropdasH1 {
+      visibily: hidden;
+      color:black;
+      position: fixed;
+      z-index: 1;
+      }
+       
+      .visible {
+      visibily: visible;
+      }
+      
         canvas {
     height: 100vh;
 }
@@ -80,6 +98,5 @@
     transform: translate(0%, -50%);
       }
      </style>
-
 
 
