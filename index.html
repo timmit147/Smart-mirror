@@ -8,17 +8,12 @@
         
     // More API functions here:
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
-//     const stropdas=Document.getElementById("stropdasH1");
+  const stropdas=Document.getElementById("stropdasH1");
 
     // the link to your model provided by Teachable Machine export panel
     const URL = "./";
 
     let model, webcam, labelContainer, maxPredictions;
-  
-//     function 
-//       stropdas.classList.add("visible");
-//     if 
-//       stropdas.classList.remove("visible");
   
   
     // Load the image model and setup the webcam
@@ -62,10 +57,10 @@
             const classPrediction =
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
           if(prediction[0].probability.toFixed(2) > 0.5){
-            console.log("yes");
+            stropdas.classList.add("visible");
           }
           else{
-            console.log("no");
+            stropdas.classList.remove("visible");
           }
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
