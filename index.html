@@ -59,9 +59,11 @@
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
           if(prediction[0].probability.toFixed(2) > 0.5){
             stropdas.classList.add("visible");
+            console.log("yes");
           }
           else{
             stropdas.classList.remove("visible");
+            console.log("no");
           }
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
@@ -79,8 +81,8 @@
 }
       
       #stropdasH1 {
+      visibility: hidden;
       margin: 1em;
-      visibily: hidden;
       font-family: Arial, Helvetica, sans-serif;
       color:#202124;
       position: fixed;
@@ -88,7 +90,7 @@
       }
        
       .visible {
-      visibily: visible;
+      visibility: visible;
       }
       
         canvas {
