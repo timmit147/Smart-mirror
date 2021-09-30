@@ -59,8 +59,7 @@ var downloadTimer = setInterval(function(){
 
   
         if(timeleft == 0){
-          var element = document.getElementById("webcam-container");
-  element.parentNode.removeChild(element);
+        webcam.remove();
         return;
               }
       else{
