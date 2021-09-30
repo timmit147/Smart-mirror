@@ -21,11 +21,11 @@
       console.log("hallo");
       
       //   Timer
- var timeleft = 60;
+ var timeleft = 900;
 var downloadTimer = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(downloadTimer);
-    document.getElementById("countdown").innerHTML = "Finished";
+    document.getElementById("countdown").innerHTML = "Scan again";
   } else {
     document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
   }
@@ -139,6 +139,14 @@ var downloadTimer = setInterval(function(){
            color: white;
     background-color: black;
        }
+      
+      div#countdown {
+    z-index: 5;
+    position: fixed;
+    transform: translate(0%, -50%);
+    top: 55%;
+    margin: 1em;
+}
      </style>
 
 
