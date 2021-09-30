@@ -58,11 +58,8 @@ var downloadTimer = setInterval(function(){
     }
 
   
-        if(timeleft == 0){ 
-           async function loop() {
-            }
-              }
-      else{
+        if(timeleft < 0){ 
+
      async function loop() {
 
         webcam.update(); // update the webcam frame
