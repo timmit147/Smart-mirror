@@ -15,14 +15,13 @@
 
     let model, webcam, labelContainer, maxPredictions;
   
-  
+  let timeleft = 10;
     // Load the image model and setup the webcam
     async function init() {
       console.log("hallo");
      
       
       //   Timer
-let timeleft = 10;
 var downloadTimer = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(downloadTimer);
