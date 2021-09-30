@@ -68,6 +68,9 @@ var downloadTimer = setInterval(function(){
        if(timeleft > 0){ 
               window.requestAnimationFrame(loop);
        }
+       else{
+       webcam.remove();
+       }
       }
   
 
