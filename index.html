@@ -27,7 +27,6 @@ const downloadTimer = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(downloadTimer);
     document.getElementById("countdown").innerHTML = "Scan again";
-    const 
   } else {
     document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
   }
