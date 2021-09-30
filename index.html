@@ -19,13 +19,15 @@
     // Load the image model and setup the webcam
     async function init() {
       console.log("hallo");
+     
       
       //   Timer
- var timeleft = 900;
-var downloadTimer = setInterval(function(){
+ let timeleft = 10;
+const downloadTimer = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(downloadTimer);
     document.getElementById("countdown").innerHTML = "Scan again";
+    const 
   } else {
     document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
   }
@@ -58,9 +60,14 @@ var downloadTimer = setInterval(function(){
     }
 
     async function loop() {
+      if(timeleft == 0){
+        return;
+              }
+
         webcam.update(); // update the webcam frame
         await predict();
         window.requestAnimationFrame(loop);
+  
     }
 
     const stropdas = document.getElementById("stropdasH1");
