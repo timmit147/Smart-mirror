@@ -69,7 +69,9 @@ var downloadTimer = setInterval(function(){
               window.requestAnimationFrame(loop);
        }
        else{
-       webcam.remove();
+var el = document.getElementById('webcam-container');
+
+while ( el.firstChild ) el.removeChild( el.firstChild );
        }
       }
   
