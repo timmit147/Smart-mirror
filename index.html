@@ -60,6 +60,7 @@ var downloadTimer = setInterval(function(){
   
         if(timeleft < 0){ 
           window.cancelAnimationFrame(loop);
+          webcam.stop();
         }
 
      async function loop() {
