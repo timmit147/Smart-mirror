@@ -58,8 +58,9 @@ var downloadTimer = setInterval(function(){
     }
 
   
-//         if(timeleft < 0){ 
-//         }
+        if(timeleft < 0){ 
+          window.cancelAnimationFrame(loop);
+        }
 
      async function loop() {
         webcam.update(); // update the webcam frame
